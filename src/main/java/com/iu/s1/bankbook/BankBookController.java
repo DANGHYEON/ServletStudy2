@@ -55,6 +55,7 @@ public class BankBookController {
 			}
 			
 			RequestDispatcher view =request.getRequestDispatcher("../WEB-INF/views/bankbook/bankbookList.jsp");
+			request.setAttribute("ar", ar);
 			
 			try {
 				
@@ -79,6 +80,9 @@ public class BankBookController {
 			System.out.println(bankBookDTO.getBookName());
 			
 			RequestDispatcher view =request.getRequestDispatcher("../WEB-INF/views/bankbook/bankbookSelect.jsp");
+			
+			request.setAttribute("dto",bankBookDTO );
+			
 			try {
 				
 				view.forward(request, response);
