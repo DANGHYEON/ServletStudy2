@@ -78,9 +78,25 @@ public class BankBookController {
 				String bn =	request.getParameter("bookName");
 				String br = request.getParameter("bookRate");
 				String bs = request.getParameter("bookSale");
-				System.out.println("bookName : "+bn);
-				System.out.println("bookRate : "+br);
-				System.out.println("bookSale : "+bs);
+				BankBookDTO bankBookDTO = new BankBookDTO();
+				bankBookDTO.setBookName(bn);
+				bankBookDTO.setBookRate(Double.parseDouble(br));
+				bankBookDTO.setBookSale(Integer.parseInt(bs));
+				
+				int result = bankBookDAO.setInsert(bankBookDTO);
+				System.out.println(result);
+				
+//				ArrayList<BankBookDTO> ar =bankBookDAO.getList();
+//				request.setAttribute("ar", ar);
+				
+				try {
+					response.sendRedirect("./bankbookList.do");
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				
+				
 			}else {
 			RequestDispatcher view = request.getRequestDispatcher("../WEB-INF/views/bankbook/bankbookInsert.jsp");	
 			

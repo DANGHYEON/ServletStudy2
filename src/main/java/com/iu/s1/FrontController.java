@@ -46,7 +46,12 @@ public class FrontController extends HttpServlet {
 			path = st.substring(startIndex,lastIndex); //  결과 : /bankbook ('/' 빼고싶으면 startIndex+1)
 			
 			if(path.equals("/member")) {
-				memberController.start(request);
+				try {
+					memberController.start(request,response);
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 			}else if(path.equals("/bankbook")) {
 				
 				bankBookController.start(request,response);
