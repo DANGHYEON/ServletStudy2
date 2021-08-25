@@ -69,6 +69,29 @@ public class BankBookController {
 			
 		}else if(path.equals("/bankbookInsert")) {
 			System.out.println("상품등록");
+			
+			String method = request.getMethod();
+			
+			
+			if(method.equals("POST")) {
+				
+				String bn =	request.getParameter("bookName");
+				String br = request.getParameter("bookRate");
+				String bs = request.getParameter("bookSale");
+				System.out.println("bookName : "+bn);
+				System.out.println("bookRate : "+br);
+				System.out.println("bookSale : "+bs);
+			}else {
+			RequestDispatcher view = request.getRequestDispatcher("../WEB-INF/views/bankbook/bankbookInsert.jsp");	
+			
+				try {
+					view.forward(request, response);
+				}
+				catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
 		}else if(path.equals("/bankbookSelect")) {
 			System.out.println("상품상세조회");
 			long value = Long.parseLong(request.getParameter("booknumber"));

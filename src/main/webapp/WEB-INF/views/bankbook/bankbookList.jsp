@@ -28,7 +28,12 @@
 	<% } %>
 	
 	</table>
-	<h3></h3>
+	
+	<a href="bankbookInsert.do">Write</a>
+	
+	
+	
+	
 	
 </body>
 </html>
