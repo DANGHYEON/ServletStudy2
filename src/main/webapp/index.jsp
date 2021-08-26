@@ -5,10 +5,23 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+
+<link href="./css/test.css" rel="stylesheet">
+<style type="text/css">
+	h1{
+		color : blue;
+	}
+	h3{
+		color :lime;
+	}
+	a {
+		color: black;
+			}
+</style>
 </head>
 <body>
 	<h1>Index Page</h1>
-	<h3>Member</h3>
+	<h3 style="color: red;">Member</h3>
 	
 	<p>
 		<a href="/ServletStudy2/member/memberLogin.do?id=t1&pw=123">Member Login</a><br>
