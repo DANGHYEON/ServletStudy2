@@ -3,11 +3,14 @@ package com.iu.s1;
 import java.io.IOException;
 
 import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.iu.s1.bankbook.BankBookController;
 import com.iu.s1.member.MemberController;
@@ -36,6 +39,16 @@ public class FrontController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		ServletConfig sc = getServletConfig(); //내장객체를 가지고 올때 
+		HttpSession session = request.getSession();
+		ServletContext context =session.getServletContext();
+		context = getServletContext();
+		
+		
+		
+		
+		
+		
 			System.out.println("FrontController 실행");
 			String st = request.getRequestURI();
 			System.out.println(st);
