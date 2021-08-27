@@ -16,7 +16,8 @@
 	}
 	a {
 		color: black;
-			}
+		
+		}
 </style>
 </head>
 <body>
@@ -38,6 +39,12 @@
 	
 	</p>
 	
+	<h2 class="c1 c2">Button</h2>
+
+	<button class="c1">CLICK </button>	
+	
+	
+	<div id="circle">circle</div>
 	
 </body>
 </html>

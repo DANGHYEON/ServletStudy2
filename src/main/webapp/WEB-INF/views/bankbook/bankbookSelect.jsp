@@ -6,9 +6,10 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link href="../css/ttest.css" rel="stylesheet">
 </head>
 <body>
-	<h1>BankBook Select Page</h1>
+	<h1 id="title">BankBook Select Page</h1>
 	
 
 	
