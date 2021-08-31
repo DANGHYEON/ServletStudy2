@@ -19,9 +19,9 @@
     <div class="container bg-primary">container</div>
     <div class="container-fluid bg-danger">
     	<div class="row">
-    		<div class="col-4 bg-primary">1</div>
-    		<div class="col-3 bg-danger">2</div>
-    		<div class="col-5 bg-info">3</div>
+    		<div class="col-sm-12 col-lg-4 bg-primary">1</div>
+    		<div class="col-sm-12 col-lg-4 bg-danger">2</div>
+    		<div class="col-sm-12 col-lg-4 bg-info">3</div>
     	</div>
     </div>
 
